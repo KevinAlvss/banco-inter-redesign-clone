@@ -38,7 +38,7 @@ export function Login() {
           <LoginBox>
               <TextWrapper>
                 <img src={logoInter} alt="logo-inter" draggable={false}/>
-                <p>Seja bem vindo ao estudo de redesign da interface do Banco Inter.</p>
+                <p>Seja bem vindo ao estudo de redesign da interface do Banco Inter</p>
               </TextWrapper>
               <InputWrapper>
                 <input type="text" placeholder="Digite seu nome para entrar" onChange={e => setUserName(e.target.value)} value={userName}/>
