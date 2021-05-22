@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
     height:100vh;
@@ -11,7 +12,7 @@ export const Container = styled.div`
     transition: background .2s ease-in-out;
 `;
 
-export const LoginBox = styled.div`
+export const LoginBox = styled(motion.div)`
     position: relative;
     top: 0;
 
@@ -27,14 +28,6 @@ export const LoginBox = styled.div`
 
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 0.5rem 2rem;
-
-    animation-name: top-animation;
-    animation-duration: 1s;
-
-    @keyframes top-animation {
-    0% { top: -20px }
-    100% { top: 0 }
-    }
 `;
 
 export const TextWrapper = styled.div`
@@ -59,35 +52,44 @@ export const InputWrapper = styled.div`
     flex-direction: column;
     align-items: center;
 
-    > button, input {
+    > input {
         height: 2.5rem;
         width: 100%;
         
         border-radius: .5rem;
 
         font-size: 1rem;
-    }
 
-    > input{
         background-color:#F6F6F8;
         color: #6c757d;
         
         padding: 0 1rem;
     }
-
-    > button{
-        background: linear-gradient(90deg, rgb(255, 80, 15) 0%, rgb(255, 135, 0) 100%);
+       
+    > a {
+        width: 100%;
         
-        margin-top: 10px;
-        
-        color: white;
-        font-weight: 500;
+        > button{
+            height: 2.5rem;
+            width: 100%;
+            
+            border-radius: .5rem;
 
-        transition: filter .25s ease-in-out;
+            font-size: 1rem;
 
-        &:disabled{
-            cursor: not-allowed;
-            filter: opacity(.6);
+            background: linear-gradient(90deg, rgb(255, 80, 15) 0%, rgb(255, 135, 0) 100%);
+            
+            margin-top: 10px;
+            
+            color: white;
+            font-weight: 500;
+
+            transition: filter .25s ease-in-out;
+
+            &:disabled{
+                cursor: not-allowed;
+                filter: opacity(.6);
+            }
         }
     }
 `;
