@@ -4,9 +4,10 @@ import { Container, LoginBox, TextWrapper, InputWrapper } from './styles'
 
 import logoInter from '../../images/logo-inter.svg'
 
-export function Login() {
+import { useLogin } from '../../context/LoginContext'
 
-    const [userName, setUserName] = useState('');
+export function Login() {
+    const { userName, setUserName } = useLogin();
     const [color, setColor] = useState('');
 
     

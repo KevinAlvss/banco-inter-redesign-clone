@@ -2,9 +2,15 @@ import React from 'react';
 
 import { Wrapper, Container, LogoBox, RigthSide, ProfileButton, Separetor } from './styles';
 
+import { useLogin } from '../../context/LoginContext'
+
 import LogoInter from '../../images/logo-inter.svg'
 
 export function Header() {
+    const { userName } = useLogin()
+
+    const digitsUserName = userName.substr(0, 2).toUpperCase() ;
+
   return (
     <Wrapper>
         <Container>
@@ -31,7 +37,7 @@ export function Header() {
                 </button>
 
                 <ProfileButton>
-                    KE
+                    { digitsUserName }
                 </ProfileButton>
             </RigthSide>
         </Container>
