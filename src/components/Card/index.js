@@ -10,7 +10,7 @@ export function Card({delay}) {
         transition={{
             duration: 1.4,
             delay: delay
-        }}
+        }}  
       >
 
       </Container>
